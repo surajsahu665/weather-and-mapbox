@@ -1,7 +1,7 @@
 const request = require('request');
 
 const url = 'http://api.weatherstack.com/current?access_key=92aae5f123982b43a5a6244518853471&query=bhilai';
-const apiUrlMapBox = 'https://api.mapbox.com/geocoding/v5/mapbox.places/mahasamund.json?access_token=pk.eyJ1Ijoic3VyYWpzYWh1NjY1IiwiYSI6ImNramVkdWFxYTNid3UyeW5xYWp4bHV5c2UifQ.bO0JRGll3AZFYgMNZ-sbTA';
+const MapBox = 'https://api.mapbox.com/geocoding/v5/mapbox.places/mahasamund.json?access_token=pk.eyJ1Ijoic3VyYWpzYWh1NjY1IiwiYSI6ImNramVkdWFxYTNid3UyeW5xYWp4bHV5c2UifQ.bO0JRGll3AZFYgMNZ-sbTA';
 
 
 request({ url:url, json:true }, function(error,response){
@@ -28,7 +28,7 @@ request({ url:url, json:true }, function(error,response){
     }
 });
 
-request({url : apiUrlMapBox, json : true}, (error,response) => {
+request({url : MapBox, json : true}, (error,response) => {
    
     console.log(`
     ============================MAPBOX======================
